@@ -1,0 +1,12 @@
+[
+  {
+    "firstName": "Prajkta",
+    "lastName": "Raut",
+    "phoneNumber": "7666682585",
+    "address": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipCode": "400088"
+    }
+  }
+]
