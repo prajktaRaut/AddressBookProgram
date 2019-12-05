@@ -77,13 +77,34 @@ public class AddressBookImplementation implements AddressBookInterface {
     public String sortByName() throws IOException {
 
         readFromJson(fileName);
-
         Collections.sort(personInformation);
-
         writeIntoJson();
 
-        return "Data sorted by name";
+        return "Data sorted by name Successfully";
     }
+
+    @Override
+    public String sortByZip() throws IOException {
+
+            readFromJson(fileName);
+            for(int i=0;i<personInformation.size()-1;i++)
+            {
+                for (int j = 0; j < personInformation.size() - i - 1; j++)
+                {
+                    if (personInformation.get(j).getAddress().getZipCode().compareTo(personInformation.get(j + 1).getAddress().getZipCode()) > 0)
+                    {
+                        Person temp=personInformation.get(j);
+                        personInformation.set(j,personInformation.get(j+1));
+                        personInformation.set(j+1,temp);
+                    }
+                }
+            }
+            writeIntoJson();
+            return "Sorted By Zip Successfully";
+
+
+    }
+
 
     public String writeIntoJson() throws IOException {
 

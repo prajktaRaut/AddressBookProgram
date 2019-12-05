@@ -1,6 +1,8 @@
 package com.addressbook;
 
-public class Person implements Comparable<Person>{
+import java.util.Comparator;
+
+public class Person implements Comparable<Person> {
 
     String firstName;
     String lastName;
@@ -64,4 +66,5 @@ public class Person implements Comparable<Person>{
     public int compareTo(Person o) {
         return this.getFirstName().compareTo(o.getFirstName());
     }
+
 }

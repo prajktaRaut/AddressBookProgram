@@ -45,4 +45,13 @@ public class AddressBookTest {
         System.out.println(result);
 
     }
+
+    @Test
+    public void givenMethod_SortPersonInformation_ByZipCode() throws IOException {
+
+        String result=implementation.sortByZip();
+
+        System.out.println(result);
+
+    }
 }
