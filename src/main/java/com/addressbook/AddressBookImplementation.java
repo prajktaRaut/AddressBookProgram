@@ -105,6 +105,23 @@ public class AddressBookImplementation implements AddressBookInterface {
 
     }
 
+    @Override
+    public void printAllEntries() throws IOException {
+
+        readFromJson(fileName);
+
+        System.out.print("FirstName"+"\t"+"LastName"+"\t"+"PhoneNumber"+"\t\t"+"City"+"\t\t"+"State"+"\t\t"+"ZipCode");
+        System.out.println();
+
+        for (int i=0;i<personInformation.size();i++)
+        {
+            System.out.println(personInformation.get(i).getFirstName()+" \t"+personInformation.get(i).getLastName()+" \t\t"+personInformation.get(i).getPhoneNumber()+" \t\t"+personInformation.get(i).getAddress().getCity()+" \t\t"+personInformation.get(i).getAddress().getState()+" \t"+personInformation.get(i).getAddress().getZipCode());
+
+        }
+
+
+    }
+
 
     public String writeIntoJson() throws IOException {
 

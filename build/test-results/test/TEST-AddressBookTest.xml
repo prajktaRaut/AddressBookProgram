@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T11:51:21" hostname="admin1-desktop" time="0.05">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T13:11:18" hostname="admin1-desktop" time="0.046">
   <properties/>
-  <testcase name="givenMethod_SortPersonInformation_ByZipCode" classname="AddressBookTest" time="0.05"/>
-  <system-out><![CDATA[Sorted By Zip Successfully
+  <testcase name="givenMethod_ShowAllData_FromAddressBook" classname="AddressBookTest" time="0.046"/>
+  <system-out><![CDATA[FirstName	LastName	PhoneNumber		City		State		ZipCode
+Avanisha 	Ingale 		7666645677 		Dhule 		Maharashtra 	444107
+Pallavi 	Raut 		9850178109 		Pune 		Maharashtra 	444105
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

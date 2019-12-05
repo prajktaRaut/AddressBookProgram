@@ -1,5 +1,15 @@
 [
   {
+    "firstName": "Avanisha",
+    "lastName": "Ingale",
+    "phoneNumber": "7666645677",
+    "address": {
+      "city": "Dhule",
+      "state": "Maharashtra",
+      "zipCode": "444107"
+    }
+  },
+  {
     "firstName": "Pallavi",
     "lastName": "Raut",
     "phoneNumber": "9850178109",
@@ -7,16 +17,6 @@
       "city": "Pune",
       "state": "Maharashtra",
       "zipCode": "444105"
-    }
-  },
-  {
-    "firstName": "Avanisha",
-    "lastName": "Ingale",
-    "phoneNumber": "7666645677",
-    "address": {
-      "city": "Karanja",
-      "state": "Maharashtra",
-      "zipCode": "444107"
     }
   }
 ]

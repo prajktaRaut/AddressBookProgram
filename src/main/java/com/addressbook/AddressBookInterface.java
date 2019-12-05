@@ -15,5 +15,7 @@ public interface AddressBookInterface {
 
     public String sortByZip() throws IOException;
 
+    public void printAllEntries() throws IOException;
+
 
     }

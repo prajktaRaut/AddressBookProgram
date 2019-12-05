@@ -54,4 +54,11 @@ public class AddressBookTest {
         System.out.println(result);
 
     }
+
+    @Test
+    public void givenMethod_ShowAllData_FromAddressBook() throws IOException {
+
+        implementation.printAllEntries();
+
+    }
 }
