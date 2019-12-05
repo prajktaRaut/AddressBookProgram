@@ -64,12 +64,21 @@ public class AddressBookImplementation implements AddressBookInterface {
         return "Edit Successfully";
     }
 
+    @Override
+    public String deletePerson(String name) throws IOException {
+
+        readFromJson(fileName);
+        personInformation.removeIf(Person->Person.getFirstName().equals(name));
+
+        writeIntoJson();
+
+        return "Delete successfully";
+    }
+
     public String writeIntoJson() throws IOException {
 
         String json=gson.toJson(personInformation);
-
         FileWriter writer=new FileWriter("/home/admin1/Documents/AddressBook/src/test/resources/AddressBook.json");
-
         writer.write(json);
         writer.close();
 

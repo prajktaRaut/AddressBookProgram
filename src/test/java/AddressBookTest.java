@@ -29,5 +29,11 @@ public class AddressBookTest {
         System.out.println(result);
     }
 
+    @Test
+    public void givenMethod_DeletePersonInformation() throws IOException {
 
+        String reult=implementation.deletePerson("Prajkta");
+        System.out.println(reult);
+
+    }
 }

@@ -9,5 +9,7 @@ public interface AddressBookInterface {
 
     public String editPerson(String name,String phonenumber,String city,String state,String zipCode) throws IOException;
 
+    public String deletePerson(String name) throws IOException;
+
 
     }
