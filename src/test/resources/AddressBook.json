@@ -2,11 +2,21 @@
   {
     "firstName": "Prajkta",
     "lastName": "Raut",
-    "phoneNumber": "7666682585",
+    "phoneNumber": "9850178109",
     "address": {
       "city": "Mumbai",
       "state": "Maharashtra",
-      "zipCode": "400088"
+      "zipCode": "444103"
+    }
+  },
+  {
+    "firstName": "Pallavi",
+    "lastName": "Raut",
+    "phoneNumber": "9850178109",
+    "address": {
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipCode": "444103"
     }
   }
 ]

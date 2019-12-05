@@ -13,12 +13,21 @@ public class AddressBookTest {
     Scanner scanner=new Scanner(System.in);
 
     @Test
-    public void addPerson() throws IOException {
+    public void givenMethod_AddPersonInformation() throws IOException {
 
-        String result=implementation.addPerson("Prajkta","Raut","7666682585","Mumbai","Maharashtra","400088");
+        String result=implementation.addPerson("Pallavi","Raut","7666682585","Akola","Maharashtra","400088");
 
         System.out.println(result);
 
     }
+
+    @Test
+    public void givenMethod_EditPersonInformation() throws IOException {
+
+        String result=implementation.editPerson("Pallavi","9850178109","Pune","Maharashtra","444103");
+
+        System.out.println(result);
+    }
+
 
 }

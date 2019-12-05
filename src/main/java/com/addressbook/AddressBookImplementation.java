@@ -45,7 +45,24 @@ public class AddressBookImplementation implements AddressBookInterface {
         return output;
     }
 
+    @Override
+    public String editPerson(String name,String phonenumber, String city, String state, String zipCode) throws IOException {
 
+        readFromJson(fileName);
+
+        for (int i=0;i<personInformation.size();i++)
+        {
+            if (personInformation.get(i).getFirstName().equals(name))
+            {
+                personInformation.get(i).setPhoneNumber(phonenumber);
+                personInformation.get(i).getAddress().setCity(city);
+                personInformation.get(i).getAddress().setState(state);
+                personInformation.get(i).getAddress().setZipCode(zipCode);
+            }
+        }
+        writeIntoJson();
+        return "Edit Successfully";
+    }
 
     public String writeIntoJson() throws IOException {
 
