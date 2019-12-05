@@ -1,7 +1,7 @@
 package com.addressbook;
 
 import java.io.IOException;
-import java.util.List;
+
 
 public interface AddressBookInterface {
 
@@ -10,6 +10,8 @@ public interface AddressBookInterface {
     public String editPerson(String name,String phonenumber,String city,String state,String zipCode) throws IOException;
 
     public String deletePerson(String name) throws IOException;
+
+    public String sortByName() throws IOException;
 
 
     }

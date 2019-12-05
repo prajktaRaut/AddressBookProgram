@@ -1,5 +1,15 @@
 [
   {
+    "firstName": "Avanisha",
+    "lastName": "Ingale",
+    "phoneNumber": "7666645677",
+    "address": {
+      "city": "Karanja",
+      "state": "Maharashtra",
+      "zipCode": "400105"
+    }
+  },
+  {
     "firstName": "Pallavi",
     "lastName": "Raut",
     "phoneNumber": "9850178109",

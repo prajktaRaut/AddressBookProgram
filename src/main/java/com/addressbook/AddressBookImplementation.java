@@ -3,12 +3,10 @@ package com.addressbook;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AddressBookImplementation implements AddressBookInterface {
@@ -73,6 +71,18 @@ public class AddressBookImplementation implements AddressBookInterface {
         writeIntoJson();
 
         return "Delete successfully";
+    }
+
+    @Override
+    public String sortByName() throws IOException {
+
+        readFromJson(fileName);
+
+        Collections.sort(personInformation);
+
+        writeIntoJson();
+
+        return "Data sorted by name";
     }
 
     public String writeIntoJson() throws IOException {

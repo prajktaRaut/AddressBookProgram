@@ -1,6 +1,6 @@
 package com.addressbook;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
     String firstName;
     String lastName;
@@ -58,5 +58,10 @@ public class Person {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", address=" + address +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.getFirstName().compareTo(o.getFirstName());
     }
 }

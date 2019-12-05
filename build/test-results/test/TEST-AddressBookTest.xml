@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T10:48:26" hostname="admin1-desktop" time="0.044">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T11:09:42" hostname="admin1-desktop" time="0.053">
   <properties/>
-  <testcase name="givenMethod_DeletePersonInformation" classname="AddressBookTest" time="0.044"/>
-  <system-out><![CDATA[Delete successfully
+  <testcase name="givenMethod_SortPersonInformation_ByName" classname="AddressBookTest" time="0.053"/>
+  <system-out><![CDATA[Data sorted by name
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

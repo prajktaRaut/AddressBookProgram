@@ -15,7 +15,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_AddPersonInformation() throws IOException {
 
-        String result=implementation.addPerson("Pallavi","Raut","7666682585","Akola","Maharashtra","400088");
+        String result=implementation.addPerson("Avanisha","Ingale","7666645677","Karanja","Maharashtra","400105");
 
         System.out.println(result);
 
@@ -34,6 +34,15 @@ public class AddressBookTest {
 
         String reult=implementation.deletePerson("Prajkta");
         System.out.println(reult);
+
+    }
+
+    @Test
+    public void givenMethod_SortPersonInformation_ByName() throws IOException {
+
+        String result=implementation.sortByName();
+
+        System.out.println(result);
 
     }
 }
