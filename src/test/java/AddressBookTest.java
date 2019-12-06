@@ -61,4 +61,12 @@ public class AddressBookTest {
         implementation.printAllEntries();
 
     }
+
+    @Test
+    public void givenMethod_CreateNewFile() throws IOException {
+
+        implementation.createNewAddressBook("NewAddressBook");
+
+    }
+
 }
