@@ -20,51 +20,47 @@ public class AddressBookTest {
     @Test
     public void givenMethod_AddPersonInformation() throws IOException {
 
-        String result=implementation.addPerson("NewAddressBook","Pari","Raut","9872312345","Akola","Maharashtra","444103");
-
-        System.out.println(result);
+        boolean result=implementation.addPerson("AddressBook","Shreyash","Khandare","9872345345","Akola","Maharashtra","444108");
+        Assert.assertTrue(result);
 
     }
 
     @Test
     public void givenMethod_EditPersonInformation() throws IOException {
 
-        String result=implementation.editPerson("AddressBook","Pari","9870341454","Mumbai","Maharashtra","444106");
-
-        System.out.println(result);
+        boolean result=implementation.editPerson("AddressBook","Pari","9870341454","Mumbai","Maharashtra","444106");
+        Assert.assertTrue(result);
     }
 
     @Test
     public void givenMethod_DeletePersonInformation() throws IOException {
 
-        String reult=implementation.deletePerson("AddressBook","Pari");
-        System.out.println(reult);
+        boolean result=implementation.deletePerson("AddressBook","Pari");
+        Assert.assertTrue(result);
 
     }
 
     @Test
     public void givenMethod_SortPersonInformation_ByName() throws IOException {
 
-        String result=implementation.sortByName("AddressBook");
-
-        System.out.println(result);
+        boolean result=implementation.sortByName("AddressBook");
+        Assert.assertTrue(result);
 
     }
 
     @Test
     public void givenMethod_SortPersonInformation_ByZipCode() throws IOException {
 
-        String result=implementation.sortByZip("AddressBook");
-
-        System.out.println(result);
+        boolean result=implementation.sortByZip("AddressBook");
+        Assert.assertTrue(result);
 
     }
 
     @Test
     public void givenMethod_ShowAllData_FromAddressBook() throws IOException {
 
-        implementation.printAllEntries("AddressBook");
-
+        boolean result=implementation.printAllEntries("AddressBook");
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -84,9 +80,17 @@ public class AddressBookTest {
     @Test
     public void givenMethod_SaveAddressBook() throws IOException {
 
-        String result=implementation.addPerson("NewAddressBook","Shreysha","Khandare","9872317889","Akola","Maharashtra","444106");
-        System.out.println(result);
+        boolean result=implementation.addPerson("NewAddressBook","Shreysha","Khandare","9872317889","Akola","Maharashtra","444106");
+        Assert.assertTrue(result);
         boolean flag=services.saveAddressBook("NewAddressBook");
         Assert.assertTrue(flag);
     }
+
+    @Test
+    public void givenMethod_SaveAddressBookAs() throws IOException {
+
+        boolean flag=services.SaveAddressBookAs("AddressBook","NewAddressBook");
+        Assert.assertTrue(flag);
+    }
+
 }

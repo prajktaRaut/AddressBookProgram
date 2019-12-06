@@ -23,7 +23,7 @@ public class AddressBookImplementation implements AddressBookInterface {
     File fileName=new File("/home/admin1/Documents/AddressBook/src/test/resources/AddressBook.json");
 
     @Override
-    public String addPerson(String fileName,String firstName, String lastName, String phoneNumber, String city,String state,String zipCode) throws IOException {
+    public boolean addPerson(String fileName,String firstName, String lastName, String phoneNumber, String city,String state,String zipCode) throws IOException {
 
         try {
             readFromJson(new File("/home/admin1/Documents/AddressBook/src/test/resources/" + fileName + ".json"));
@@ -46,12 +46,12 @@ public class AddressBookImplementation implements AddressBookInterface {
 
         String output=writeIntoJson(fileName);
 
-        return output;
+        return true;
 
     }
 
     @Override
-    public String editPerson(String fileName,String name,String phonenumber, String city, String state, String zipCode) throws IOException {
+    public boolean editPerson(String fileName,String name,String phonenumber, String city, String state, String zipCode) throws IOException {
 
         readFromJson(new File("/home/admin1/Documents/AddressBook/src/test/resources/"+fileName+".json"));
 
@@ -66,32 +66,35 @@ public class AddressBookImplementation implements AddressBookInterface {
             }
         }
         writeIntoJson(fileName);
-        return "Edit Successfully";
+        System.out.println("Edit Successfully");
+        return true;
     }
 
     @Override
-    public String deletePerson(String fileName,String name) throws IOException {
+    public boolean deletePerson(String fileName,String name) throws IOException {
 
         readFromJson(new File("/home/admin1/Documents/AddressBook/src/test/resources/"+fileName+".json"));
         personInformation.removeIf(Person->Person.getFirstName().equals(name));
 
         writeIntoJson(fileName);
 
-        return "Delete successfully";
+        System.out.println("Delete successfully");
+        return true;
     }
 
     @Override
-    public String sortByName(String fileName) throws IOException {
+    public boolean sortByName(String fileName) throws IOException {
 
         readFromJson(new File("/home/admin1/Documents/AddressBook/src/test/resources/"+fileName+".json"));
         Collections.sort(personInformation);
         writeIntoJson(fileName);
 
-        return "Data sorted by name Successfully";
+        System.out.println("Data sorted by name Successfully");
+        return true;
     }
 
     @Override
-    public String sortByZip(String fileName) throws IOException {
+    public boolean sortByZip(String fileName) throws IOException {
 
             readFromJson(new File("/home/admin1/Documents/AddressBook/src/test/resources/"+fileName+".json"));
             for(int i=0;i<personInformation.size()-1;i++)
@@ -107,13 +110,13 @@ public class AddressBookImplementation implements AddressBookInterface {
                 }
             }
             writeIntoJson(fileName);
-            return "Sorted By Zip Successfully";
-
+        System.out.println("Sorted By Zip Successfully");
+        return true;
 
     }
 
     @Override
-    public void printAllEntries(String fileName) throws IOException {
+    public boolean printAllEntries(String fileName) throws IOException {
 
         readFromJson(new File("/home/admin1/Documents/AddressBook/src/test/resources/"+fileName+".json"));
 
@@ -125,7 +128,7 @@ public class AddressBookImplementation implements AddressBookInterface {
             System.out.println(personInformation.get(i).getFirstName()+" \t"+personInformation.get(i).getLastName()+" \t\t"+personInformation.get(i).getPhoneNumber()+" \t\t"+personInformation.get(i).getAddress().getCity()+" \t\t"+personInformation.get(i).getAddress().getState()+" \t"+personInformation.get(i).getAddress().getZipCode());
 
         }
-
+            return true;
 
     }
 

@@ -78,5 +78,21 @@ public class AddressBookServices implements AddressBookMenuInterface {
         return true;
     }
 
+    @Override
+    public boolean SaveAddressBookAs(String oldAddressBook, String newAddressBook) throws IOException {
+
+        File oldFile=new File("/home/admin1/Documents/AddressBook/src/test/resources/"+oldAddressBook+".json");
+        if (oldFile.exists())
+        {
+        implementation.readFromJson(oldFile);
+        createNewAddressBook(newAddressBook);
+        implementation.writeIntoJson(newAddressBook);
+        implementation.printAllEntries(newAddressBook);
+
+        }
+
+        return true;
+    }
+
 
 }

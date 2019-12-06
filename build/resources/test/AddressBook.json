@@ -18,5 +18,15 @@
       "state": "Maharashtra",
       "zipCode": "444103"
     }
+  },
+  {
+    "firstName": "Shreyash",
+    "lastName": "Khandare",
+    "phoneNumber": "9872345345",
+    "address": {
+      "city": "Akola",
+      "state": "Maharashtra",
+      "zipCode": "444108"
+    }
   }
 ]

@@ -10,4 +10,6 @@ public interface AddressBookMenuInterface {
 
     public boolean saveAddressBook(String addressBookName) throws IOException;
 
+    public boolean SaveAddressBookAs(String oldAddressBook,String newAddressBook) throws IOException;
+
    }

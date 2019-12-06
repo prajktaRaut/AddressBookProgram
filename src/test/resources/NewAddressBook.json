@@ -1,5 +1,15 @@
 [
   {
+    "firstName": "Avanish",
+    "lastName": "Ingle",
+    "phoneNumber": "9873456785",
+    "address": {
+      "city": "Kranja",
+      "state": "Maharashtra",
+      "zipCode": "444543"
+    }
+  },
+  {
     "firstName": "Pari",
     "lastName": "Raut",
     "phoneNumber": "9872312345",
@@ -10,13 +20,13 @@
     }
   },
   {
-    "firstName": "Shreysha",
+    "firstName": "Shreyash",
     "lastName": "Khandare",
-    "phoneNumber": "9872317889",
+    "phoneNumber": "9872345345",
     "address": {
       "city": "Akola",
       "state": "Maharashtra",
-      "zipCode": "444106"
+      "zipCode": "444108"
     }
   }
 ]
