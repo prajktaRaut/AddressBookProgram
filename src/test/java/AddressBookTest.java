@@ -1,7 +1,9 @@
 import com.addressbook.AddressBookImplementation;
+import com.addressbook.AddressBookServices;
 import com.addressbook.Person;
 import org.junit.Test;
 
+import javax.xml.ws.Service;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
@@ -9,6 +11,8 @@ import java.util.Scanner;
 public class AddressBookTest {
 
     AddressBookImplementation implementation=new AddressBookImplementation();
+
+    AddressBookServices services=new AddressBookServices();
 
     Scanner scanner=new Scanner(System.in);
 
@@ -65,7 +69,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_CreateNewFile() throws IOException {
 
-        implementation.createNewAddressBook("NewAddressBook");
+        services.createNewAddressBook("NewAddressBook");
 
     }
 
