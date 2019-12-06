@@ -19,7 +19,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_AddPersonInformation() throws IOException {
 
-        String result=implementation.addPerson("Avanisha","Ingale","7666645677","Karanja","Maharashtra","400105");
+        String result=implementation.addPerson("NewAddressBook","Pari","Raut","9872312345","Akola","Maharashtra","444103");
 
         System.out.println(result);
 
@@ -28,7 +28,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_EditPersonInformation() throws IOException {
 
-        String result=implementation.editPerson("Pallavi","9850178109","Pune","Maharashtra","444103");
+        String result=implementation.editPerson("AddressBook","Pari","9870341454","Mumbai","Maharashtra","444106");
 
         System.out.println(result);
     }
@@ -36,7 +36,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_DeletePersonInformation() throws IOException {
 
-        String reult=implementation.deletePerson("Prajkta");
+        String reult=implementation.deletePerson("AddressBook","Pari");
         System.out.println(reult);
 
     }
@@ -44,7 +44,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_SortPersonInformation_ByName() throws IOException {
 
-        String result=implementation.sortByName();
+        String result=implementation.sortByName("AddressBook");
 
         System.out.println(result);
 
@@ -53,7 +53,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_SortPersonInformation_ByZipCode() throws IOException {
 
-        String result=implementation.sortByZip();
+        String result=implementation.sortByZip("AddressBook");
 
         System.out.println(result);
 
@@ -62,7 +62,7 @@ public class AddressBookTest {
     @Test
     public void givenMethod_ShowAllData_FromAddressBook() throws IOException {
 
-        implementation.printAllEntries();
+        implementation.printAllEntries("AddressBook");
 
     }
 
@@ -73,4 +73,10 @@ public class AddressBookTest {
 
     }
 
+    @Test
+    public void givenMethod_OpenExistFile() throws IOException {
+
+        services.openExistingAddressBook("NewAddressBook");
+
+    }
 }

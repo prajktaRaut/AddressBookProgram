@@ -1,22 +1,22 @@
 [
   {
-    "firstName": "Avanisha",
-    "lastName": "Ingale",
-    "phoneNumber": "7666645677",
+    "firstName": "Avanish",
+    "lastName": "Ingle",
+    "phoneNumber": "9873456785",
     "address": {
-      "city": "Dhule",
+      "city": "Kranja",
       "state": "Maharashtra",
-      "zipCode": "444107"
+      "zipCode": "444543"
     }
   },
   {
-    "firstName": "Pallavi",
+    "firstName": "Pari",
     "lastName": "Raut",
-    "phoneNumber": "9850178109",
+    "phoneNumber": "9872312345",
     "address": {
-      "city": "Pune",
+      "city": "Akola",
       "state": "Maharashtra",
-      "zipCode": "444105"
+      "zipCode": "444103"
     }
   }
 ]
