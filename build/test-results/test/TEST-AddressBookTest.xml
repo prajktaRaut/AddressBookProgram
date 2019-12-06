@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T06:22:36" hostname="admin1-desktop" time="0.04">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T07:09:34" hostname="admin1-desktop" time="0.047">
   <properties/>
-  <testcase name="givenMethod_OpenExistFile" classname="AddressBookTest" time="0.04"/>
+  <testcase name="givenMethod_OpenExistFile" classname="AddressBookTest" time="0.047"/>
   <system-out><![CDATA[Existing files :
 NewAddressBook.json
 AddressBook.json
 Existing file name is/home/admin1/Documents/AddressBook/src/test/resources/NewAddressBook.json
-Inside try block
 FirstName	LastName	PhoneNumber		City		State		ZipCode
 Pari 	Raut 		9872312345 		Akola 		Maharashtra 	444103
+Shreysha 	Khandare 		9872317889 		Akola 		Maharashtra 	444106
 File Open Successfully.
-File Opened successfully.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

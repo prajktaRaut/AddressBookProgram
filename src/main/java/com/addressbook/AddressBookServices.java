@@ -1,7 +1,6 @@
 package com.addressbook;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class AddressBookServices implements AddressBookMenuInterface {
@@ -9,7 +8,7 @@ public class AddressBookServices implements AddressBookMenuInterface {
     AddressBookImplementation implementation=new AddressBookImplementation();
 
     @Override
-    public void createNewAddressBook(String newFileName) throws IOException {
+    public boolean createNewAddressBook(String newFileName) throws IOException {
 
         File file=new File("/home/admin1/Documents/AddressBook/src/test/resources/"+newFileName+".json");
 
@@ -23,11 +22,12 @@ public class AddressBookServices implements AddressBookMenuInterface {
         {
             System.out.println("File is already present at specific location");
         }
+        return true;
 
     }
 
     @Override
-    public void openExistingAddressBook(String existingAddressBook) throws IOException {
+    public boolean openExistingAddressBook(String existingAddressBook) throws IOException {
 
         File listOfFile=new File("/home/admin1/Documents/AddressBook/src/test/resources/");
 
@@ -51,7 +51,6 @@ public class AddressBookServices implements AddressBookMenuInterface {
                 System.out.println("File Open Successfully.");
 
             } catch (Exception e) {
-                System.out.println("Inside catch block");
                 e.printStackTrace();
             }
 
@@ -60,6 +59,24 @@ public class AddressBookServices implements AddressBookMenuInterface {
             System.out.println("File Not Found");
         }
 
+        return true;
     }
+
+    @Override
+    public boolean saveAddressBook(String addressBookName) throws IOException {
+
+        if(new File("/home/admin1/Documents/AddressBook/src/test/resources/"+addressBookName+".json").exists()) {
+
+            implementation.printAllEntries(addressBookName);
+            System.out.println("File Saved Successfully");
+        }
+        else
+        {
+            System.out.println("File Not Saved");
+        }
+
+        return true;
+    }
+
 
 }

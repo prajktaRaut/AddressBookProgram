@@ -1,6 +1,7 @@
 import com.addressbook.AddressBookImplementation;
 import com.addressbook.AddressBookServices;
 import com.addressbook.Person;
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.xml.ws.Service;
@@ -69,14 +70,23 @@ public class AddressBookTest {
     @Test
     public void givenMethod_CreateNewFile() throws IOException {
 
-        services.createNewAddressBook("NewAddressBook");
-
+        boolean flag=services.createNewAddressBook("NewAddressBook");
+        Assert.assertTrue(flag);
     }
 
     @Test
     public void givenMethod_OpenExistFile() throws IOException {
 
-        services.openExistingAddressBook("NewAddressBook");
+        boolean status=services.openExistingAddressBook("NewAddressBook");
+        Assert.assertTrue(status);
+    }
 
+    @Test
+    public void givenMethod_SaveAddressBook() throws IOException {
+
+        String result=implementation.addPerson("NewAddressBook","Shreysha","Khandare","9872317889","Akola","Maharashtra","444106");
+        System.out.println(result);
+        boolean flag=services.saveAddressBook("NewAddressBook");
+        Assert.assertTrue(flag);
     }
 }

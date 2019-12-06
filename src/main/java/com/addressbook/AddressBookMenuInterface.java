@@ -4,8 +4,10 @@ import java.io.IOException;
 
 public interface AddressBookMenuInterface {
 
-    public void createNewAddressBook(String newFileName) throws IOException;
+    public boolean createNewAddressBook(String newFileName) throws IOException;
 
-    public void openExistingAddressBook(String existingAddressBook) throws IOException;
+    public boolean openExistingAddressBook(String existingAddressBook) throws IOException;
+
+    public boolean saveAddressBook(String addressBookName) throws IOException;
 
    }
